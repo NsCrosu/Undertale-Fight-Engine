@@ -1,0 +1,12 @@
+alarm[0] = 1;
+text = "";
+xoffset = 0;
+yoffset = 0;
+sound = -1;
+font = -1;
+col = ca.white;
+effect = -1;
+xscale = 1;
+yscale = 1;
+angle = 0;
+alpha = 1;
