@@ -17,7 +17,7 @@ if char_i < string_length(text) + 1{
 			}else{
 				do{
 					repeat(char_per_frame){
-						while((string_char_at(text, char_i) == textReturnTag || string_char_at(text, char_i) == textCommandTagOpen || string_char_at(text, char_i) == " ") && (wait == 0 || type_speed == -1) && !paused && char_i <= string_length(text)){
+						while((string_char_at(text, char_i) == textTagReturn || string_char_at(text, char_i) == textCommandTagOpen || string_char_at(text, char_i) == " ") && (wait == 0 || type_speed == -1) && !paused && char_i <= string_length(text)){
 							while((string_char_at(text, char_i) == textCommandTagOpen) && (wait == 0 || type_speed == -1) && !paused && char_i <= string_length(text)){
 								textCharMoveNext;
 								ds_list_clear(list_command);
@@ -34,7 +34,7 @@ if char_i < string_length(text) + 1{
 												}catch(_){
 													if textCommandShowError{
 //														debug_msg("错误, 给定的指令参数\"" + string(command) + "\"无法被解释\nERROR! The given command parameter \"" + string(command) + "\" could not be executed.\n");
-														debug_msg("给定的指令不是real类型, 跳过转换类型中...");
+														debug_msg("给定的指令\"" + string(command) + "\"不是real类型, 跳过转换类型中...");
 													}
 												}
 										}
@@ -63,7 +63,7 @@ if char_i < string_length(text) + 1{
 									debug_msg("在解释打字机指令时出现未知的错误\nTexttyper Command Execution Error.\n");
 								}
 							}
-							while((string_char_at(text, char_i) == textReturnTag) && (wait == 0 || type_speed == -1) && !paused && char_i <= string_length(text)){
+							while((string_char_at(text, char_i) == textTagReturn) && (wait == 0 || type_speed == -1) && !paused && char_i <= string_length(text)){
 								textNewLine;
 								textCharMoveNext;
 							}

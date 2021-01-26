@@ -9,8 +9,8 @@ if ord(char) >= 0xa0{
 	if !edited{
 		xscale = 2;
 		yscale = 2;
-		xspace = 7;
-		yspace = 8;
+		xspace = 8;
+		yspace = 9;
 	}
 }else{
 	if font == 0{
@@ -21,7 +21,7 @@ if ord(char) >= 0xa0{
 		xscale = 2;
 		yscale = 2;
 		xspace = 5;
-		yspace = 5;
+		yspace = 8;
 		draw_set_font(textDefaultFontCN);
 		var _h1 = string_height(" ");
 		draw_set_font(textDefaultFontEN);

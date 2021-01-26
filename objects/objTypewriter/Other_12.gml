@@ -249,5 +249,8 @@ switch(command[|0]){
 				}
 			}
 		}
-	break;
+		break;
+	case "end":
+		instance_destroy();
+		break;
 }
